@@ -21,7 +21,7 @@ jobs:
       - name: Build Executable
         run: pyinstaller -y --onefile chatbot.py
       - name: Upload Linux Executable
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: linux-executable
           path: ./dist/chatbot
@@ -41,7 +41,7 @@ jobs:
       - name: Build Executable
         run: pyinstaller -y --onefile chatbot.py
       - name: Upload Windows Executable
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: windows-executable
           path: ./dist/chatbot
@@ -61,7 +61,7 @@ jobs:
       - name: Build Executable
         run: pyinstaller -y --onefile chatbot.py
       - name: Upload macOS Executable
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: macos-executable
           path: ./dist/chatbot
