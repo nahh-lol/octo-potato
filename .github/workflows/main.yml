@@ -9,9 +9,9 @@ jobs:
   build-linux:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: 3.11
       - name: Install dependencies
@@ -24,14 +24,14 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: linux-executable
-          path: dist/
+          path: /
 
   build-windows:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: 3.11
       - name: Install dependencies
@@ -44,14 +44,14 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: windows-executable
-          path: dist/
+          path: /
 
   build-macos:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: 3.11
       - name: Install dependencies
@@ -64,4 +64,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: macos-executable
-          path: dist/
+          path: /
