@@ -19,12 +19,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install pyinstaller
       - name: Build Executable
-        run: pyinstaller -y --onefile chatbot.py
+        run: pwd; pyinstaller -y --onefile chatbot.py
       - name: Upload Linux Executable
         uses: actions/upload-artifact@v4
         with:
           name: linux-executable
-          path: ./dist/chatbot
+          path: ./dist
 
   build-windows:
     runs-on: windows-latest
@@ -39,12 +39,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install pyinstaller
       - name: Build Executable
-        run: pyinstaller -y --onefile chatbot.py
+        run: pwd; pyinstaller -y --onefile chatbot.py
       - name: Upload Windows Executable
         uses: actions/upload-artifact@v4
         with:
           name: windows-executable
-          path: ./dist/chatbot
+          path: ./dist
 
   build-macos:
     runs-on: macos-latest
@@ -59,7 +59,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pyinstaller
       - name: Build Executable
-        run: pyinstaller -y --onefile chatbot.py
+        run: pwd; pyinstaller -y --onefile chatbot.py
       - name: Upload macOS Executable
         uses: actions/upload-artifact@v4
         with:
