@@ -24,7 +24,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: linux-executable
-          path: /
+          path: ./dist/chatbot/linux
 
   build-windows:
     runs-on: windows-latest
@@ -44,7 +44,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: windows-executable
-          path: /
+          path: ./dist/chatbot/windows
 
   build-macos:
     runs-on: macos-latest
@@ -64,4 +64,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: macos-executable
-          path: /
+          path: ./dist/chatbot/macos
